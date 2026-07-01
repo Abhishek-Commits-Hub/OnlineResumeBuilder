@@ -31,81 +31,84 @@
             <form id="resume-form">
                 
                 <fieldset>
-                    <legend>Personal Details</legend>
-                    <label for="fullName">Full Name:</label>
+                    <legend><h3>Personal Details</h3></legend>
+                    <label for="fullName">Full Name:</label> <!--Name   -->
                     <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
                     <br><br>
                     
-                    <label for="email">Email:</label>
+                    <label for="email">Email:</label><!--Email   -->
                     <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
                     <br><br>
 
-                    <label for="phone">Phone Number:</label>
+                    <label for="phone">Phone Number:</label><!--Phone   -->
                     <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
                     <br><br>
 
-                    <label for="summary">Professional Summary:</label><br>
+                    <label for="summary">Professional Summary:</label><!--Summary   -->
                     <textarea id="summary" name="summary" rows="4" cols="50"></textarea>
                 </fieldset>
+                <fieldset>
+                    <legend><h3>Professional Details</h3></legend>
+                
+                    <fieldset class="form-card">
 
-                <fieldset class="form-card">
+                        <legend class="form-card-title">Work Experience</legend>
 
-                    <legend class="form-card-title">Work Experience</legend>
+                        <div class="form-group">
+                            <label class="form-label" for="jobTitle">Job Title</label>
+                            <input class="form-input" type="text" id="jobTitle" name="jobTitle"
+                                placeholder="Frontend Developer Intern">
+                        </div>
 
-                    <div class="form-group">
-                        <label class="form-label" for="jobTitle">Job Title</label>
-                        <input class="form-input" type="text" id="jobTitle" name="jobTitle"
-                            placeholder="Frontend Developer Intern">
-                    </div>
+                        <div class="form-group">
+                            <label class="form-label" for="company">Company</label>
+                            <input class="form-input" type="text" id="company" name="company"
+                                placeholder="ABC Technologies">
+                        </div>
 
-                    <div class="form-group">
-                        <label class="form-label" for="company">Company</label>
-                        <input class="form-input" type="text" id="company" name="company"
-                            placeholder="ABC Technologies">
-                    </div>
+                        <div class="form-group">
+                            <label class="form-label" for="jobDesc">Job Description</label>
+                            <textarea class="form-textarea" id="jobDesc" name="jobDesc" rows="4"
+                                placeholder="Describe your responsibilities..."></textarea>
+                        </div>
 
-                    <div class="form-group">
-                        <label class="form-label" for="jobDesc">Job Description</label>
-                        <textarea class="form-textarea" id="jobDesc" name="jobDesc" rows="4"
-                            placeholder="Describe your responsibilities..."></textarea>
-                    </div>
+                    </fieldset>
 
+                    <fieldset class="form-card">
+
+                        <legend class="form-card-title">Skills</legend>
+
+                        <div class="form-group">
+                            <label class="form-label" for="skills">List your skills</label>
+                            <textarea class="form-textarea" id="skills" name="skills" rows="2"
+                                placeholder="HTML, CSS, JavaScript"></textarea>
+                        </div>
+
+                        <button class="secondary-button" type="button" id="btn-addskills">
+                            Add Skills
+                        </button>
+
+                    </fieldset>
+
+                    <fieldset class="form-card">
+
+                        <legend class="form-card-title">Projects</legend>
+
+                        <div class="form-group">
+                            <label class="form-label" for="projectTitle">Project Title</label>
+                            <input class="form-input" type="text" id="projectTitle" name="projectTitle"
+                                placeholder="ResumeCraft">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="projectDesc">Project Description</label>
+                            <textarea class="form-textarea" id="projectDesc" name="projectDesc" rows="4"
+                                placeholder="Describe your project..."></textarea>
+                        </div>
+
+                    
+                    </fieldset>
                 </fieldset>
-
-                <fieldset class="form-card">
-
-                    <legend class="form-card-title">Skills</legend>
-
-                    <div class="form-group">
-                        <label class="form-label" for="skills">List your skills</label>
-                        <textarea class="form-textarea" id="skills" name="skills" rows="2"
-                            placeholder="HTML, CSS, JavaScript"></textarea>
-                    </div>
-
-                    <button class="secondary-button" type="button" id="btn-addskills">
-                        Add Skills
-                    </button>
-
-                </fieldset>
-
-                <fieldset class="form-card">
-
-                    <legend class="form-card-title">Projects</legend>
-
-                    <div class="form-group">
-                        <label class="form-label" for="projectTitle">Project Title</label>
-                        <input class="form-input" type="text" id="projectTitle" name="projectTitle"
-                            placeholder="ResumeCraft">
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="projectDesc">Project Description</label>
-                        <textarea class="form-textarea" id="projectDesc" name="projectDesc" rows="4"
-                            placeholder="Describe your project..."></textarea>
-                    </div>
-
-                </fieldset>
-
             </form>
 
             <div class="button-group" id="controls">
