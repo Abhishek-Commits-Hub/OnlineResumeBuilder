@@ -1,5 +1,5 @@
 function addField(){
-var tx=document.createElement("textarea");
+let tx=document.createElement("textarea");
 tx.classList.add('form-control');
 tx.classList.add('weField');
 tx.classList.add('mt-2');
