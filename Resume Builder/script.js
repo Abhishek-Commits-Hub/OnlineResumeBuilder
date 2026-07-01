@@ -5,7 +5,7 @@ tx.classList.add('weField');
 tx.classList.add('mt-2');
 tx.setAttribute("placeholder","Add skill");
 tx.setAttribute("rows",2);
-var mainButton=document.querySelector("#we");
+var mainButton=document.querySelector("#we fieldset");
 var insertButton=document.querySelector("#weAddButton");
 mainButton.insertBefore(tx,insertButton);
 }
