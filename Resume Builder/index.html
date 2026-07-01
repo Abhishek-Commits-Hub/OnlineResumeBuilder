@@ -71,8 +71,9 @@
 
                 <fieldset>
                     <legend>Skills</legend>
-                    <label for="skills">List your skills (comma separated):</label><br>
-                    <textarea id="skills" name="skills" rows="3" cols="50"></textarea>
+                    <label for="skills">List your skills:</label><br>
+                    <textarea id="skills" name="skills" rows="2" cols="50"></textarea>
+                    <button type="button" id="btn-addskills">Add Skills</button>  
                 </fieldset>
                 <br>
 
@@ -88,44 +89,31 @@
             </form>
             <br>
 
-            <div id="controls">
-                <button type="button" id="btn-analyze">Analyse Resume</button>
-                <button type="button" id="btn-portfolio">Generate Portfolio</button>
-                <button type="button" id="btn-pdf">Download as PDF</button>
+            <div id="controls">                
+                <button type="button" id="btn-portfolio">Generate Portfolio</button>               
             </div>
         </section>
-
         <hr>
-
         <aside id="preview-section">
-            <h2>Live Preview</h2>
-            
+            <h2>Live Preview</h2>         
             <div id="analysis-feedback">
                 </div>
-
             <div id="resume-preview">
                 <h3 id="preview-name">Your Name</h3>
-                <p id="preview-contact">Email | Phone</p>
-                
+                <p id="preview-contact">Email | Phone</p>               
                 <h4>Summary</h4>
-                <p id="preview-summary">Your summary will appear here...</p>
-                
+                <p id="preview-summary">Your summary will appear here...</p>               
                 <h4>Education</h4>
-                <p id="preview-education">Degree - University (Year)</p>
-                
+                <p id="preview-education">Degree - University (Year)</p>                
                 <h4>Work Experience</h4>
-                <p id="preview-experience">Job Title at Company <br> Description...</p>
-                
+                <p id="preview-experience">Job Title at Company <br> Description...</p>                
                 <h4>Skills</h4>
-                <p id="preview-skills">Skill 1, Skill 2...</p>
-                
+                <p id="preview-skills">Skill 1, Skill 2...</p>               
                 <h4>Projects</h4>
                 <p id="preview-projects">Project Title: Description...</p>
             </div>
         </aside>
-
     </main>
-
     <hr>
 </body>
 </html>
