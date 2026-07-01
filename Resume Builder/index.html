@@ -1,119 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ResumeCraft - Free Offline Resume Builder</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="assets/images/ResumeCraft.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>ResumeCraft</h1>
-        <p>Build, analyze, and generate your resume and portfolio instantly.</p>
+    <header class="site-header">
+        <div class="header-content">
+            <h1 class="site-logo">ResumeCraft</h1>
+            <p class="site-tagline">
+                Build, analyze, and generate your resume and portfolio instantly.
+            </p>
+        </div>
     </header>
 
-    <hr>
-<br><br>
-    <main>
-        
-        <section id="builder-section">
-            <h2>Resume Details</h2>
-            
-            <form id="resume-form">
-                
-                <fieldset>
-                    <legend>Personal Details</legend>
-                    <label for="fullName">Full Name:</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
-                    <br><br>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
-                    <br><br>
+    <main class="main-container">
 
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
-                    <br><br>
+        <section class="resume-builder" id="builder-section">
 
-                    <label for="summary">Professional Summary:</label><br>
-                    <textarea id="summary" name="summary" rows="4" cols="50"></textarea>
-                </fieldset>
-                <br><br>
+            <h2 class="section-title">Resume Details</h2>
 
-                <fieldset>
-                    <legend>Education</legend>
-                    <label for="degree">Degree/Major:</label>
-                    <input type="text" id="degree" name="degree" placeholder="Bachelor of Science in Computer Science">
-                    <br><br>
+            <form class="resume-form" id="resume-form">
 
-                    <label for="university">University/College:</label>
-                    <input type="text" id="university" name="university"  placeholder="Stanford University">
-                    <br><br>
+                <fieldset class="form-card">
 
-                    <label for="gradYear">Graduation Year:</label>
-                    <input type="number" id="gradYear" name="gradYear">
-                </fieldset>
-                <br>
+                    <legend class="form-card-title">Personal Details</legend>
 
-                <fieldset>
-                    <legend>Work Experience</legend>
-                    <label for="jobTitle">Job Title:</label>
-                    <input type="text" id="jobTitle" name="jobTitle" placeholder="Software Engineer">
-                    <br><br>
-
-                    <label for="company">Company:</label>
-                    <input type="text" id="company" name="company" placeholder="Amazon">
-                    <br><br>
-
-                    <label for="jobDesc">Description (Action verbs recommended!):</label><br>
-                    <textarea id="jobDesc"  name="jobDesc" rows="4" cols="50"></textarea>
-                </fieldset>
-                <br>
-
-                <div class="form-group mt-2" id="we">
-                    <label for="skills">List your skills:</label><br>
-                    <textarea id="skills" class="form-control weField" name="skills" rows="2" cols="50"></textarea>
-                    <div class="container text-center mt-2" id="weAddButton">
-                     <button onclick="addField()" type="button" id="btn-addskills">Add Skills</button>  
+                    <div class="form-group">
+                        <label class="form-label" for="fullName">Full Name</label>
+                        <input class="form-input" type="text" id="fullName" name="fullName" placeholder="John Doe"
+                            required>
                     </div>
-                    
-                </div>
-                <br>
 
-                <fieldset>
-                    <legend>Projects</legend>
-                    <button type="button" id="btn-addProject">Add Project</button>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-input" type="email" id="email" name="email" placeholder="john@example.com"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number</label>
+                        <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 9876543210">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="summary">Professional Summary</label>
+                        <textarea class="form-textarea" id="summary" name="summary" rows="4"
+                            placeholder="Write a short professional summary..."></textarea>
+                    </div>
+
                 </fieldset>
-            </form>
-            <br>
 
-            <div id="controls">                
-                <button type="button" id="btn-portfolio">Generate Portfolio</button>               
+                <fieldset class="form-card">
+
+                    <legend class="form-card-title">Education</legend>
+
+                    <div class="form-group">
+                        <label class="form-label" for="degree">Degree / Major</label>
+                        <input class="form-input" type="text" id="degree" name="degree"
+                            placeholder="B.Tech Computer Science">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="university">University / College</label>
+                        <input class="form-input" type="text" id="university" name="university"
+                            placeholder="XYZ University">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="gradYear">Graduation Year</label>
+                        <input class="form-input" type="number" id="gradYear" name="gradYear" placeholder="2028">
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="form-card">
+
+                    <legend class="form-card-title">Work Experience</legend>
+
+                    <div class="form-group">
+                        <label class="form-label" for="jobTitle">Job Title</label>
+                        <input class="form-input" type="text" id="jobTitle" name="jobTitle"
+                            placeholder="Frontend Developer Intern">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="company">Company</label>
+                        <input class="form-input" type="text" id="company" name="company"
+                            placeholder="ABC Technologies">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="jobDesc">Job Description</label>
+                        <textarea class="form-textarea" id="jobDesc" name="jobDesc" rows="4"
+                            placeholder="Describe your responsibilities..."></textarea>
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="form-card">
+
+                    <legend class="form-card-title">Skills</legend>
+
+                    <div class="form-group">
+                        <label class="form-label" for="skills">List your skills</label>
+                        <textarea class="form-textarea" id="skills" name="skills" rows="2"
+                            placeholder="HTML, CSS, JavaScript"></textarea>
+                    </div>
+
+                    <button class="secondary-button" type="button" id="btn-addskills">
+                        Add Skills
+                    </button>
+
+                </fieldset>
+
+                <fieldset class="form-card">
+
+                    <legend class="form-card-title">Projects</legend>
+
+                    <div class="form-group">
+                        <label class="form-label" for="projectTitle">Project Title</label>
+                        <input class="form-input" type="text" id="projectTitle" name="projectTitle"
+                            placeholder="ResumeCraft">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="projectDesc">Project Description</label>
+                        <textarea class="form-textarea" id="projectDesc" name="projectDesc" rows="4"
+                            placeholder="Describe your project..."></textarea>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+            <div class="button-group" id="controls">
+
+                <button class="primary-button" type="button" id="btn-portfolio">
+                    Generate Resume
+                </button>
+
             </div>
+
         </section>
-        <hr>
-        <aside id="preview-section">
-            <h2>Live Preview</h2>         
-            <div id="analysis-feedback">
-                </div>
-            <div id="resume-preview">
-                <h3 id="preview-name">Your Name</h3>
-                <p id="preview-contact">Email | Phone</p>               
-                <h4>Summary</h4>
-                <p id="preview-summary">Your summary will appear here...</p>               
-                <h4>Education</h4>
-                <p id="preview-education">Degree - University (Year)</p>                
-                <h4>Work Experience</h4>
-                <p id="preview-experience">Job Title at Company <br> Description...</p>                
-                <h4>Skills</h4>
-                <p id="preview-skills">Skill 1, Skill 2...</p>               
-                <h4>Projects</h4>
-                <p id="preview-projects">Project Title: Description...</p>
+
+        <aside class="resume-preview-container" id="preview-section">
+
+            <h2 class="section-title">Live Preview</h2>
+
+            <div class="analysis-box" id="analysis-feedback"></div>
+
+            <div class="resume-paper" id="resume-preview">
+
+                <h3 class="resume-name" id="preview-name">
+                    John Doe
+                </h3>
+
+                <p class="resume-contact" id="preview-contact">
+                    &#9993; john.doe@email.com &nbsp;&nbsp; | &nbsp;&nbsp; &#128241; +91 9876543210
+                </p>
+
+                <h4 class="resume-section-title">Professional Summary</h4>
+
+                <p class="resume-content" id="preview-summary">
+                    Passionate Computer Science student with strong problem-solving skills and
+                    experience in web development using HTML, CSS, and JavaScript. Interested
+                    in creating responsive and user-friendly web applications.
+                </p>
+
+                <h4 class="resume-section-title">Education</h4>
+
+                <p class="resume-content" id="preview-education">
+                    <strong>B.Tech in Computer Science Engineering</strong><br>
+                    XYZ University<br>
+                    Graduation Year: 2028
+                </p>
+
+                <h4 class="resume-section-title">Work Experience</h4>
+
+                <p class="resume-content" id="preview-experience">
+                    <strong>Frontend Developer Intern</strong><br>
+                    ABC Technologies<br>
+                    Assisted in developing responsive web pages, fixed UI bugs, and collaborated
+                    with the development team on client projects.
+                </p>
+              <h4 class="resume-section-title">Skills</h4>
+                <p class="resume-content" id="preview-skills">
+                    HTML • CSS • JavaScript • Git • GitHub • C Programming
+                </p>
+                <h4 class="resume-section-title">Projects</h4>
+
+                <p class="resume-content" id="preview-projects">
+                    <strong>ResumeCraft</strong><br>
+                    Designed and developed an offline resume builder with live preview,
+                    portfolio generation, and printable resume support using HTML, CSS,
+                    and JavaScript.
+                </p>
             </div>
         </aside>
     </main>
-    <hr>
-    <script src="script.js"></script>
+
 </body>
+
 </html>
