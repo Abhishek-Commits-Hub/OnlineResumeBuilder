@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=.0">
     <title>ResumeCraft - Free Offline Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -17,10 +18,11 @@
     <main>
         
         <section id="builder-section">
-            <h2>Personal Details</h2>
+            <h2>Resume Details</h2>
             
             <form id="resume-form">
                 <fieldset>
+                    <legend>Personal Details</legend>
                     <label for="fullName">Full Name:</label>
                     <input type="text" id="fullName" name="fullName" required>
                     <br><br>
@@ -33,20 +35,11 @@
                     <input type="tel" id="phone" name="phone">
                     <br><br>
 
-                    <label for="linkedin">LinkedIn:</label>
-                    <input type="url" id="linkedin" name="linkedin">
-                    <br><br>
-
-                    <label for="facebook">Facebook:</label>
-                    <input type="url" id="facebook" name="facebook">
-                    <br><br>
-                    <label for="github">GitHub:</label>
-                    <input type="url" id="github" name="github">    
+                    <label for="summary">Professional Summary:</label><br>
+                    <textarea id="summary" name="summary" rows="4" cols="50"></textarea>
                 </fieldset>
                 <br><br>
-        </section>
 
-                
                 <fieldset>
                     <legend>Education</legend>
                     <label for="degree">Degree/Major:</label>
@@ -73,16 +66,19 @@
                     <br><br>
 
                     <label for="jobDesc">Description (Action verbs recommended!):</label><br>
-                    <textarea id="jobDesc" name="jobDesc" rows="4" cols="50"></textarea>
+                    <textarea id="jobDesc"  name="jobDesc" rows="4" cols="50"></textarea>
                 </fieldset>
                 <br>
 
-                <fieldset>
-                    <legend>Skills</legend>
+                <div class="form-group mt-2" id="we">
+                    <!-- <legend>Skills</legend> -->
                     <label for="skills">List your skills:</label><br>
-                    <textarea id="skills" name="skills" rows="2" cols="50"></textarea>
-                    <button type="button" id="btn-addskills">Add Skills</button>  
-                </fieldset>
+                    <textarea id="skills" class="form-control weField" name="skills" rows="2" cols="50"></textarea>
+                    <div class="container text-center mt-2" id="weAddButton">
+                     <button onclick="addField()" type="button" id="btn-addskills">Add Skills</button>  
+                    </div>
+                    
+                </div>
                 <br>
 
                 <fieldset>
@@ -123,5 +119,6 @@
         </aside>
     </main>
     <hr>
+    <script src="index.js"></script>
 </body>
 </html>
