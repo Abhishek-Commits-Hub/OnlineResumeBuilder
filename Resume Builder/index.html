@@ -34,19 +34,23 @@
                     <legend><h3>Personal Details</h3></legend>
                     <label for="fullName">Full Name:</label> <!--Name   -->
                     <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
-                    <br><br>
+                    <br>
                     
                     <label for="email">Email:</label><!--Email   -->
                     <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
-                    <br><br>
+                    <br>
 
                     <label for="phone">Phone Number:</label><!--Phone   -->
                     <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
-                    <br><br>
+                    <br>
 
-                    <laber for="linkedin">LinkedIn Profile:</label><!--LinkedIn   -->
+                    <label for="linkedin">LinkedIn Profile:</label><!--LinkedIn   -->
                     <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/yourprofile">
-                    <br><br>
+                    <br>
+
+                    <label for="address">Current City:</label><!--Address   -->
+                    <input type="text" id="address" name="address" placeholder="Mumbai, IN">
+                    <br>
 
                     <label for="summary">Professional Summary:</label><!--Summary   -->
                     <textarea id="summary" name="summary" rows="4" cols="50"></textarea>
@@ -104,16 +108,8 @@
 
                         <legend class="form-card-title">Projects</legend>
 
-                        <div class="form-group">
-                            <label class="form-label" for="projectTitle">Project Title</label>
-                            <input class="form-input" type="text" id="projectTitle" name="projectTitle"
-                                placeholder="ResumeCraft">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label" for="projectDesc">Project Description</label>
-                            <textarea class="form-textarea" id="projectDesc" name="projectDesc" rows="4"
-                                placeholder="Describe your project..."></textarea>
+                        <div class="container text-center mt-2" id="weAddButton">
+                        <button type="button" id="btn-addprojects">Add Project</button>  
                         </div>
 
                     
