@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.0">
+    <title>ResumeCraft - Free Offline Resume Builder</title>
+</head>
+<body>
+
+    <header>
+        <h1>ResumeCraft</h1>
+        <p>Build, analyze, and generate your resume and portfolio instantly.</p>
+    </header>
+
+    <hr>
+
+    <main>
+        
+        <section id="builder-section">
+            <h2>Resume Details</h2>
+            
+            <form id="resume-form">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                    <br><br>
+
+                    <label for="summary">Professional Summary:</label><br>
+                    <textarea id="summary" name="summary" rows="4" cols="50"></textarea>
+                </fieldset>
+                <br><br>
+
+                <fieldset>
+                    <legend>Education</legend>
+                    <label for="degree">Degree/Major:</label>
+                    <input type="text" id="degree" name="degree">
+                    <br><br>
+
+                    <label for="university">University/College:</label>
+                    <input type="text" id="university" name="university">
+                    <br><br>
+
+                    <label for="gradYear">Graduation Year:</label>
+                    <input type="number" id="gradYear" name="gradYear">
+                </fieldset>
+                <br>
+
+                <fieldset>
+                    <legend>Work Experience</legend>
+                    <label for="jobTitle">Job Title:</label>
+                    <input type="text" id="jobTitle" name="jobTitle">
+                    <br><br>
+
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company">
+                    <br><br>
+
+                    <label for="jobDesc">Description (Action verbs recommended!):</label><br>
+                    <textarea id="jobDesc" name="jobDesc" rows="4" cols="50"></textarea>
+                </fieldset>
+                <br>
+
+                <fieldset>
+                    <legend>Skills</legend>
+                    <label for="skills">List your skills (comma separated):</label><br>
+                    <textarea id="skills" name="skills" rows="3" cols="50"></textarea>
+                </fieldset>
+                <br>
+
+                <fieldset>
+                    <legend>Projects</legend>
+                    <label for="projectTitle">Project Title:</label>
+                    <input type="text" id="projectTitle" name="projectTitle">
+                    <br><br>
+
+                    <label for="projectDesc">Project Description:</label><br>
+                    <textarea id="projectDesc" name="projectDesc" rows="4" cols="50"></textarea>
+                </fieldset>
+            </form>
+            <br>
+
+            <div id="controls">
+                <button type="button" id="btn-analyze">Analyse Resume</button>
+                <button type="button" id="btn-portfolio">Generate Portfolio</button>
+                <button type="button" id="btn-pdf">Download as PDF</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <aside id="preview-section">
+            <h2>Live Preview</h2>
+            
+            <div id="analysis-feedback">
+                </div>
+
+            <div id="resume-preview">
+                <h3 id="preview-name">Your Name</h3>
+                <p id="preview-contact">Email | Phone</p>
+                
+                <h4>Summary</h4>
+                <p id="preview-summary">Your summary will appear here...</p>
+                
+                <h4>Education</h4>
+                <p id="preview-education">Degree - University (Year)</p>
+                
+                <h4>Work Experience</h4>
+                <p id="preview-experience">Job Title at Company <br> Description...</p>
+                
+                <h4>Skills</h4>
+                <p id="preview-skills">Skill 1, Skill 2...</p>
+                
+                <h4>Projects</h4>
+                <p id="preview-projects">Project Title: Description...</p>
+            </div>
+        </aside>
+
+    </main>
+
+    <hr>
+</body>
+</html>
