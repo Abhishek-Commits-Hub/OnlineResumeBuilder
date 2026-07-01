@@ -3,3 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+.weField {
+    display: block;
+    width: 30%;
+    margin-bottom: 10px;
+}
