@@ -22,20 +22,22 @@
     </header>
 
     <hr>
-<br><br>
+    <br><br>
     <main>
-        
+
         <section id="builder-section">
             <h2>Resume Details</h2>
-            
+
             <form id="resume-form">
-                
+
                 <fieldset>
-                    <legend><h3>Personal Details</h3></legend>
+                    <legend>
+                        <h3>Personal Details</h3>
+                    </legend>
                     <label for="fullName">Full Name:</label> <!--Name   -->
                     <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
                     <br>
-                    
+
                     <label for="email">Email:</label><!--Email   -->
                     <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
                     <br>
@@ -45,7 +47,8 @@
                     <br>
 
                     <label for="linkedin">LinkedIn Profile:</label><!--LinkedIn   -->
-                    <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/yourprofile">
+                    <input type="url" id="linkedin" name="linkedin"
+                        placeholder="https://www.linkedin.com/in/yourprofile">
                     <br>
 
                     <label for="address">Current City:</label><!--Address   -->
@@ -54,21 +57,26 @@
 
                     <label for="summary">Professional Summary:</label><!--Summary   -->
                     <textarea id="summary" name="summary" rows="4" cols="50"></textarea>
+
+                    <label for="profilePic">Profile Photo:</label>
+                    <input type="file" id="profilePic" accept="image/*">
                 </fieldset>
                 <fieldset>
-                    <legend><h3>Professional Details</h3></legend>
+                    <legend>
+                        <h3>Professional Details</h3>
+                    </legend>
                     <fieldset>
-                    <legend>Education</legend>
-                    <label for="degree">Degree/Major:</label>
-                    <input type="text" id="degree" name="degree" placeholder="B.Tech in Computer Science">
-                    <br><br>
+                        <legend>Education</legend>
+                        <label for="degree">Degree/Major:</label>
+                        <input type="text" id="degree" name="degree" placeholder="B.Tech in Computer Science">
+                        <br><br>
 
-                    <label for="university">University/College:</label>
-                    <input type="text" id="university" name="university" placeholder="XYZ University">
-                    <br><br>
+                        <label for="university">University/College:</label>
+                        <input type="text" id="university" name="university" placeholder="XYZ University">
+                        <br><br>
 
-                    <label for="gradYear">Graduation Year:</label>
-                    <input type="number" id="gradYear" name="gradYear" placeholder="2029">
+                        <label for="gradYear">Graduation Year:</label>
+                        <input type="number" id="gradYear" name="gradYear" placeholder="2029">
                     </fieldset>
                     <br>
                     <fieldset class="form-card">
@@ -94,27 +102,30 @@
 
                     </fieldset>
 
-                     <div class="form-group mt-2" id="we">
-                    <fieldset class="form-card">
-                    <legend class="form-card-title">Skills</legend>
-                    <label for="skills">List your skills:</label><br>
-                    <textarea id="skills" class="form-control weField" name="skills" rows="2" cols="50" placeholder="Add skill"></textarea>
-                    <div class="container text-center mt-2" id="weAddButton">
-                     <button onclick="addField()" type="button" id="btn-addskills">Add Skills</button>  
+                    <div class="form-group mt-2" id="we">
+                        <fieldset class="form-card">
+                            <legend class="form-card-title">Skills</legend>
+                            <label for="skills">List your skills:</label><br>
+                            <textarea id="skills" class="form-control weField" name="skills" rows="2" cols="50"
+                                placeholder="Add skill"></textarea>
+                            <div class="container text-center mt-2" id="weAddButton">
+                                <button onclick="addField()" type="button" id="btn-addskills">Add Skills</button>
+                            </div>
+                        </fieldset>
                     </div>
-                   </fieldset> 
-                </div>
 
-                           <div class="form-group mt-2" id="weProject">
-                    <fieldset class="form-card">
-                    <legend class="form-card-title">Project</legend>
-                    <label for="project">Add Project</label><br>
-                    <textarea id="project" class="form-control weProject" name="project" rows="2" cols="50" placeholder="Add Project"></textarea>
-                    <div class="container text-center mt-2" id="weAddButtonProject">
-                     <button onclick="addFieldProject()" type="button" id="btn-addProject">Add Project</button>  
+                    <div class="form-group mt-2" id="weProject">
+                        <fieldset class="form-card">
+                            <legend class="form-card-title">Project</legend>
+                            <label for="project">Add Project</label><br>
+                            <textarea id="project" class="form-control weProject" name="project" rows="2" cols="50"
+                                placeholder="Add Project"></textarea>
+                            <div class="container text-center mt-2" id="weAddButtonProject">
+                                <button onclick="addFieldProject()" type="button" id="btn-addProject">Add
+                                    Project</button>
+                            </div>
+                        </fieldset>
                     </div>
-                    </fieldset>
-                </div>
                 </fieldset>
             </form>
 
@@ -135,14 +146,22 @@
             <div class="analysis-box" id="analysis-feedback"></div>
 
             <div class="resume-paper" id="resume-preview">
+                <div class="resume-header">
 
-                <h3 class="resume-name" id="preview-name">
-                    John Doe
-                </h3>
+                    <div class="resume-header-left">
+                        <h3 class="resume-name" id="preview-name">John Doe</h3>
 
-                <p class="resume-contact" id="preview-contact">
-                    &#9993; john.doe@email.com &nbsp;&nbsp; | &nbsp;&nbsp; &#128241; +91 9876543210
-                </p>
+                        <p class="resume-contact" id="preview-contact">
+                            &#9993; john.doe@email.com &nbsp;&nbsp; | &nbsp;&nbsp; &#128241; +91 9876543210
+                        </p>
+                    </div>
+
+                    <div class="resume-header-right">
+                        <img src="assets/images/profile-img.jpeg" alt="Profile Photo" class="profile-image"
+                            id="preview-image">
+                    </div>
+
+                </div>
 
                 <h4 class="resume-section-title">Professional Summary</h4>
 
@@ -157,7 +176,7 @@
                 <p class="resume-content" id="preview-education">
                     <strong>B.Tech in Computer Science Engineering</strong><br>
                     XYZ University<br>
-                    Graduation Year: 2028
+                    Graduation Year: 2029
                 </p>
 
                 <h4 class="resume-section-title">Work Experience</h4>
@@ -168,10 +187,17 @@
                     Assisted in developing responsive web pages, fixed UI bugs, and collaborated
                     with the development team on client projects.
                 </p>
-              <h4 class="resume-section-title">Skills</h4>
-                <p class="resume-content" id="preview-skills">
-                    HTML • CSS • JavaScript • Git • GitHub • C Programming
-                </p>
+                <h4 class="resume-section-title">Skills</h4>
+                <div class="resume-content" id="preview-skills">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>C Programming</li>
+                    </ul>
+                </div>
                 <h4 class="resume-section-title">Projects</h4>
 
                 <p class="resume-content" id="preview-projects">
@@ -183,7 +209,7 @@
             </div>
         </aside>
     </main>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
