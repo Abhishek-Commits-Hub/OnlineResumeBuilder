@@ -131,10 +131,12 @@
 
             <div class="button-group" id="controls">
 
-                <button class="primary-button" type="button" id="btn-portfolio">
+                <button onclick="generateResume()" class="primary-button" type="button" id="btn-portfolio">
                     Generate Resume
                 </button>
-
+              <!-- <button onclick="printCV()" class="primary-button" type="button" id="printBtn">
+        Print Resume
+    </button> -->
             </div>
 
         </section>
@@ -152,7 +154,7 @@
                         <h3 class="resume-name" id="preview-name">John Doe</h3>
 
                         <p class="resume-contact" id="preview-contact">
-                            &#9993; john.doe@email.com &nbsp;&nbsp; | &nbsp;&nbsp; &#128241; +91 9876543210
+                            &#9993;<span id="preview-email">john.doe@email.com</span> &nbsp;&nbsp; | &nbsp;&nbsp; &#128241; <span id="preview-phone">+91 9876543210</span>
                         </p>
                     </div>
 
@@ -208,6 +210,11 @@
                 </p>
             </div>
         </aside>
+        <div class="button-group">
+    <button id="printBtn" onclick="printCV()" style="display:none;">
+        Print Resume
+    </button>
+</div>
     </main>
     <script src="script.js"></script>
 </body>
