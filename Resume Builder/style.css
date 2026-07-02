@@ -265,6 +265,8 @@ button {
 @media(max-width:900px) {
   main {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .resume-preview-container {
